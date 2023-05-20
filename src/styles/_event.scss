@@ -1,0 +1,41 @@
+@use 'variables';
+.event{
+    background-image: linear-gradient(variables.$blueGradient,  variables.$pink);
+    padding: 1rem;
+    &-2{
+        background-image: linear-gradient( variables.$pink, variables.$pink); 
+    }
+     &-3{
+        background-image: linear-gradient(variables.$pink,variables.$blueGradient) ; 
+     }
+    &__item{
+
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        img{
+            margin: 0 auto;
+            display: block;
+            max-width: 70%;
+        }
+        @media(max-width: 678px){
+          display: block;
+        }
+        
+        &__description{
+            margin: 0 auto;
+            width: 80%;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            h2{
+                text-transform: uppercase;
+                margin-bottom: 40px ;
+            }
+            @media(max-width: 678px){
+             margin: 1rem auto;
+              }
+        }
+    }
+}
